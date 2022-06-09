@@ -1,0 +1,75 @@
+.works
+    width: 100%
+    &__container
+        width: 848px
+        margin: 0 auto
+
+        *:nth-child(2)
+            padding-top: 0
+
+    &__header
+        width: 100%
+        height: 96px
+        font-size: 22px
+        color: #21243D
+        line-height: 96px
+    @media (max-width: 888px)
+        &__container
+            width: 100%
+            padding: 0px 20px 
+.work
+    padding: 32px 0px 32px 0px
+    width: 100%
+    display: flex
+    gap: 18px
+    min-height: 228px
+    border-bottom: 1px solid #E0E0E0
+
+    @media (max-width: 642px)
+        flex-direction: column
+        align-items: center
+        &__content
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__text
+            max-width: 320px
+
+    &__image
+        width: 246px
+        padding: 0
+        margin: 0
+        height: 180px
+        border-radius: 6px 
+        overflow: hidden
+        flex: 1 0 auto
+        img
+            width: 100%
+    &__title
+        font-weight: bold
+        font-size: 30px
+        line-height: 44px
+        color: #21243D
+    &__info
+        display: flex
+        margin-top: 20px
+        height: 25px
+    &__date
+        padding-left: 10px
+        padding-right: 10px
+        border-radius: 16px
+        font-weight: 900
+        font-size: 18px
+        color: #fff
+        background: #142850
+    &__type
+        font-size: 20px
+        line-height: 29px
+        color: #8695A4
+        margin-left: 26px
+        line-height: 25px
+    &__text
+        margin-top: 18px
+        font-size: 16px
+        line-height: 23px
+        color: #21243D
