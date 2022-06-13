@@ -5,9 +5,7 @@ const path = require('path')
 
 module.exports = {
     mode: 'development',
-    entry: {
-        main: './src/index.js'
-    },
+    entry: './src/index.js',
     module: {
         rules: [
             {
@@ -24,13 +22,24 @@ module.exports = {
             },
         ]
     },
+    devServer: {
+        port: 3000,
+        compress: true,
+        liveReload: true,
+        open: true,
+        static: {
+            directory: path.join(__dirname, 'build')
+        }
+    },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'build'),
         clean: true
     },
     plugins: [
-        new MiniCssExtractPlugin(),
+        new MiniCssExtractPlugin({
+            filename: 'style.css'
+        }),
         new HTMLWebpackPlugin({
             template: './src/index.html'
         }),
@@ -38,7 +47,7 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src', 'images'),
-                    to: path.resolve(__dirname, 'dist', 'images')
+                    to: path.resolve(__dirname, 'build', 'images')
                 }
             ]
         })

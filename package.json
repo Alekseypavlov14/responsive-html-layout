@@ -2,10 +2,10 @@
   "name": "webpack-bundler",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./build/bundle.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack --watch"
+    "dev": "webpack serve"
   },
   "author": "Aleksey Pavlov <aleshapavlov9@gmail.com>",
   "license": "ISC",
